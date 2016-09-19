@@ -46,12 +46,13 @@
                                                                        name="search"/></a>
                                 </div>
                                 <div style="margin-top:80px" class="bs-example4" data-example-id="contextual-table">
-                                    <table class="table">
+                                    <table class="table" id="manage_user">
                                         <thead>
                                         <tr>
                                             <th>序号</th>
                                             <th>用户id</th>
                                             <th>用户名</th>
+                                            <th>账户状态</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
@@ -60,16 +61,15 @@
                                             <th scope="row">1</th>
                                             <td>10001</td>
                                             <td>13588030001</td>
+                                            <td>正常</td>
                                             <td>
                                                 <div>
                                                     <input type="button" class="btn  btn-info" name="look" value="查看账户"
-                                                           onclick="look()">
+                                                           onclick="look(this)">
                                                     <input type="button" class="btn  btn-warning" name="freeze"
-                                                           value="冻结账户" onclick="freeze()">
+                                                           value="冻结账户" onclick="freeze(this)">
                                                     <input type="button" class="btn  btn-success" name="thaw"
-                                                           value="解冻账户" onclick="thaw()">
-                                                    <input type="button" class="btn  btn-danger" name="delete"
-                                                           value="删除账户" onclick="deleteUser()">
+                                                           value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
@@ -77,16 +77,15 @@
                                             <th scope="row">2</th>
                                             <td>10002</td>
                                             <td>13588030002</td>
+                                            <td>正常</td>
                                             <td>
                                                 <div>
                                                     <input type="button" class="btn  btn-info" name="look" value="查看账户"
-                                                           onclick="look()">
+                                                           onclick="look(this)">
                                                     <input type="button" class="btn  btn-warning" name="freeze"
-                                                           value="冻结账户" onclick="freeze()">
+                                                           value="冻结账户" onclick="freeze(this)">
                                                     <input type="button" class="btn  btn-success" name="thaw"
-                                                           value="解冻账户" onclick="thaw()">
-                                                    <input type="button" class="btn  btn-danger" name="delete"
-                                                           value="删除账户" onclick="deleteUser()">
+                                                           value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
@@ -94,16 +93,15 @@
                                             <th scope="row">3</th>
                                             <td>10003</td>
                                             <td>13588030003</td>
+                                            <td>正常</td>
                                             <td>
                                                 <div>
                                                     <input type="button" class="btn  btn-info" name="look" value="查看账户"
-                                                           onclick="look()">
+                                                           onclick="look(this)">
                                                     <input type="button" class="btn  btn-warning" name="freeze"
-                                                           value="冻结账户" onclick="freeze()">
+                                                           value="冻结账户" onclick="freeze(this)">
                                                     <input type="button" class="btn  btn-success" name="thaw"
-                                                           value="解冻账户" onclick="thaw()">
-                                                    <input type="button" class="btn  btn-danger" name="delete"
-                                                           value="删除账户" onclick="deleteUser()">
+                                                           value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
@@ -111,16 +109,15 @@
                                             <th scope="row">4</th>
                                             <td>10004</td>
                                             <td>13588030004</td>
+                                            <td>正常</td>
                                             <td>
                                                 <div>
                                                     <input type="button" class="btn  btn-info" name="look" value="查看账户"
-                                                           onclick="look()">
+                                                           onclick="look(this)">
                                                     <input type="button" class="btn  btn-warning" name="freeze"
-                                                           value="冻结账户" onclick="freeze()">
+                                                           value="冻结账户" onclick="freeze(this)">
                                                     <input type="button" class="btn  btn-success" name="thaw"
-                                                           value="解冻账户" onclick="thaw()">
-                                                    <input type="button" class="btn  btn-danger" name="delete"
-                                                           value="删除账户" onclick="deleteUser()">
+                                                           value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
@@ -128,16 +125,15 @@
                                             <th scope="row">5</th>
                                             <td>10005</td>
                                             <td>13588030005</td>
+                                            <td>正常</td>
                                             <td>
                                                 <div>
                                                     <input type="button" class="btn  btn-info" name="look" value="查看账户"
-                                                           onclick="look()">
+                                                           onclick="look(this)">
                                                     <input type="button" class="btn  btn-warning" name="freeze"
-                                                           value="冻结账户" onclick="freeze()">
+                                                           value="冻结账户" onclick="freeze(this)">
                                                     <input type="button" class="btn  btn-success" name="thaw"
-                                                           value="解冻账户" onclick="thaw()">
-                                                    <input type="button" class="btn  btn-danger" name="delete"
-                                                           value="删除账户" onclick="deleteUser()">
+                                                           value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
@@ -145,16 +141,15 @@
                                             <th scope="row">6</th>
                                             <td>10006</td>
                                             <td>13588030006</td>
+                                            <td>正常</td>
                                             <td>
                                                 <div>
                                                     <input type="button" class="btn  btn-info" name="look" value="查看账户"
-                                                           onclick="look()">
+                                                           onclick="look(this)">
                                                     <input type="button" class="btn  btn-warning" name="freeze"
-                                                           value="冻结账户" onclick="freeze()">
+                                                           value="冻结账户" onclick="freeze(this)">
                                                     <input type="button" class="btn  btn-success" name="thaw"
-                                                           value="解冻账户" onclick="thaw()">
-                                                    <input type="button" class="btn  btn-danger" name="delete"
-                                                           value="删除账户" onclick="deleteUser()">
+                                                           value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
@@ -212,29 +207,26 @@
 <script>
 
     /*查看账户*/
-    function look(){
+    function look(obj){
         window.location.href="user_detail.html";
     }
 
     /*冻结账户*/
-    function freeze(){
+    function freeze(obj){
+/*        alert(obj.parentNode.parentNode.rowIndex);
+        var table = document.getElementById("manage_user");*/
+
         layer.msg('冻结成功！', {
             time: 1500, 												//1.5s后自动关闭
         });
     }
 
     /*解冻账户*/
-    function thaw(){
+    function thaw(obj){
         layer.msg('解冻成功！', {
             time: 1500, 												//1.5s后自动关闭
         });
     }
 
-    /*删除账户*/
-    function deleteUser(){
-        layer.msg('删除成功！', {
-            time: 1500, 												//1.5s后自动关闭
-        });
-    }
 </script>
 </html>
