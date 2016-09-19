@@ -64,7 +64,7 @@ span.add, span.reduce {
 
 /*每项商品(可能包含1件到多件)的金额数字样式*/
 .priceTotleNumber {
-    color: #f40;
+    color: #FF4466;
     font-weight: 700;
     font-size: 16px;
     font-family: tohoma, arial;
@@ -74,7 +74,7 @@ span.add, span.reduce {
 
 /*已选商品数量样式、合计金额数字样式*/
 .selectTotleNumber, .subTotleNumber {
-    color: #f40;
+    color: #FF4466;
     font-weight: 700;
     font-size: 20px;
     font-family: tohoma, arial;
