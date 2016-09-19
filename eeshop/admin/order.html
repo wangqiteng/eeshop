@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街后台管理</title>
+
+    <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <link href="../css/admincss/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/admincss/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/daterangepicker.js"></script>
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr">
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-publish xd-page">
+                <div class="xd-header">
+                    <h1 class="xd-title">订单列表</h1>
+                </div>
+                <div id="wrapper">
+                    <div id="page-wrapper">
+                        <div class="col-md-12 graphs">
+                            <div class="xs">
+                                <div style="font-weight: bolder;margin: 0 auto;text-align:center;padding: 10px;color: #555">
+                                    订单列表
+                                </div>
+                                <div>
+                                    <input class="search_box" type="text" placeholder="订单编号/用户名"/>
+                                    <a href="#" target="_blank"><input class="search_button" type="button" id="search"
+                                                                       name="search"/></a>
+                                </div>
+                                <div class="span12">
+                                    <div class="well">
+                                        <form class="form-horizontal">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <div class=" controls">
+                                                        <div class="input-prepend input-group">
+                                                            <label class="fr">按日期：</label>
+                                                            <span class="add-on input-group-addon"><i
+                                                                    class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                            <input type="text" style="width: 400px" name="reservation"
+                                                                   id="reservationtime" class=" form-control"
+                                                                   value="08/01/2016 1:00 PM - 08/31/2016 1:00 PM"
+                                                                   class="span4"/>
+                                                            <input type="button" name="searchByDate" id="searchByDate"
+                                                                   class="fr btn btn-info" value="查询"/>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </fieldset>
+                                        </form>
+
+                                        <script type="text/javascript">
+                                            $(document).ready(function () {
+                                                $('#reservationtime').daterangepicker({
+                                                    timePicker: true,
+                                                    timePickerIncrement: 30,
+                                                    format: 'MM/DD/YYYY h:mm A'
+                                                }, function (start, end, label) {
+                                                    console.log(start.toISOString(), end.toISOString(), label);
+                                                });
+                                            });
+                                        </script>
+
+                                    </div>
+                                </div>
+                                <div style="margin-top:30px" data-example-id="contextual-table">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>订单id</th>
+                                            <th>订单编号</th>
+                                            <th>日期</th>
+                                            <th>用户id</th>
+                                            <th>总价</th>
+                                            <th>件数</th>
+                                            <th>详情</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="info">
+                                            <th scope="row">1</th>
+                                            <td>10001</td>
+                                            <td>100000000000000001</td>
+                                            <td>2016-01-01 08:00:00</td>
+                                            <td>10001</td>
+                                            <td>690</td>
+                                            <td>6</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>10002</td>
+                                            <td>100000000000000002</td>
+                                            <td>2016-01-02 08:00:00</td>
+                                            <td>10002</td>
+                                            <td>122</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr class="info">
+                                            <th scope="row">3</th>
+                                            <td>10003</td>
+                                            <td>100000000000000003</td>
+                                            <td>2016-01-03 08:00:00</td>
+                                            <td>10003</td>
+                                            <td>85</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>10004</td>
+                                            <td>100000000000000004</td>
+                                            <td>2016-01-04 08:00:00</td>
+                                            <td>10004</td>
+                                            <td>56</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr class="info">
+                                            <th scope="row">5</th>
+                                            <td>10005</td>
+                                            <td>100000000000000005</td>
+                                            <td>2016-01-05 08:00:00</td>
+                                            <td>10005</td>
+                                            <td>79</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>10006</td>
+                                            <td>100000000000000006</td>
+                                            <td>2016-01-06 08:00:00</td>
+                                            <td>10006</td>
+                                            <td>269</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr class="info">
+                                            <th scope="row">7</th>
+                                            <td>10007</td>
+                                            <td>100000000000000007</td>
+                                            <td>2016-01-07 08:00:00</td>
+                                            <td>10007</td>
+                                            <td>99</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td>10008</td>
+                                            <td>100000000000000008</td>
+                                            <td>2016-01-08 08:00:00</td>
+                                            <td>10008</td>
+                                            <td>89</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        <tr class="info">
+                                            <th scope="row">9</th>
+                                            <td>10009</td>
+                                            <td>100000000000000009</td>
+                                            <td>2016-01-09 08:00:00</td>
+                                            <td>10009</td>
+                                            <td>109</td>
+                                            <td>1</td>
+                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="J_ManageSideBar" class="xd-manage-slide fl">
+            <div>
+                <div class="box">
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>用户管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="manage_user.html" target="_self">账户管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>订单管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="order.html" target="_self" style="color:#FF5555">订单管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>商品管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="add_items.html" target="_self">发布新商品</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="manage_items.html" target="_self">在售商品管理</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="onsale_items.html" target="_blank">热卖广告位</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>蘑菇街后台管理</title>
+    <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/manage_items_details.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+</head>
+<body class=" pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr" position: relative; top: 0px; left: 0px;>
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-edit xd-page ">
+                <div class="xd-header" style="height: 82px;">
+                    <h1 class="xd-title" style="margin-top: 0px;margin-bottom: 0px;">编辑在售商品</h1>
+                </div>
+                <div class="publish-content">
+                    <div class="form">
+                        <div class="field clearfix">
+                            <label class="fl">当前商品</label>
+                            <div class="field-content fl" style="position:relative;">
+                                	<span>
+                                    	<span>#8001</span>
+                                        <i>></i>
+                                    </span>
+                                <span>
+                                    	<span>夏季吊带可爱卡通...</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="field clearfix field-goods-title">
+                            <label class="fl">
+                                <span>标题</span>
+                                <b class="high">*</b>
+                                <span>&nbsp;</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div class="goods-title">
+                                    <input class="title-input xd-input primary" placeholder="请简洁的说明这是什么商品，标题30字以内。" maxlength="30" id="items_name" value="夏季吊带可爱卡通休闲家居字母背心性感短裤套装"/>
+                                    <span class="high ml20 goods-title-tip"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field clearfix">
+                            <label class="fl">
+                                <span>简述</span>
+                                <b class="high">*</b>
+                                <span>&nbsp;</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div class="goods-desc">
+                                    <textarea class="desc-input xd-textarea" placeholder="请简单描述该商品。" id="items_describe" />夏季吊带可爱卡通休闲家居字母背心性感短裤套装</textarea>
+                                    <span class="high"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field clearfix">
+                            <label class="fl">
+                                <span>已有SKU</span>
+                                <b class="high">*</b>
+                                <span>&nbsp;</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div class="sku-setting">
+                                    <div class="setting-content">
+                                        <div class="sku-other">
+                                            <div class="sku-meta">
+                                                <div class="sku-table ">
+                                                    <table class="xd-table" id="sku_table">
+                                                        <thead>
+                                                        <tr>
+                                                            <td class="style">颜色</td>
+                                                            <td class="size">尺码</td>
+                                                            <td class="stock">库存</td>
+                                                            <td class="code">价格</td>
+                                                            <td>操作</td>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody id="sku">
+                                                        <tr>
+                                                            <td>
+                                                                <span class="style-text">黑色</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="style-text">XXS</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="stock-text xd-input primary sku-num" id="sku_num" value="326" />
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="price-text xd-input primary sku-price" id="sku_price" value="20" />
+                                                            </td>
+                                                            <td>
+                                                                <input type="button" value="删除" id="delete_sku"/>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field clearfix">
+                            <label class="fl">
+                                <span>新增SKU</span>
+                                <b class="high">*</b>
+                                <span>&nbsp;</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div class="sku-setting">
+                                    <div class="setting-content">
+                                        <div class="sku-data">
+                                            <div class="style-list list clearfix" style="display: block;">
+                                                <label class="fl">颜色</label>
+                                                <ul class="fl" id="style_ul">
+                                                    <li class="xd-tag">黑色</li>
+                                                    <li class="xd-tag">白色</li>
+                                                    <li class="xd-tag">灰色</li>
+                                                    <li class="xd-tag">蓝色</li>
+                                                    <li class="xd-tag">红色</li>
+                                                    <li class="xd-tag">黄色</li>
+                                                    <li class="xd-tag">紫色</li>
+                                                    <li class="sku-add" id="add_style">
+                                                        <input type="text" class="add-text xd-input primary" id="new_style" />
+                                                        <a class="add-btn" id="add_new_style">添加</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="size-list list clearfix" style="display: block;">
+                                                <label class="fl">尺码</label>
+                                                <ul class="f1" id="size_ul">
+                                                    <li class="xd-tag">XXS</li>
+                                                    <li class="xd-tag">XS</li>
+                                                    <li class="xd-tag">S</li>
+                                                    <li class="xd-tag">M</li>
+                                                    <li class="xd-tag">L</li>
+                                                    <li class="xd-tag">XL</li>
+                                                    <li class="xd-tag">XXL</li>
+                                                    <li class="xd-tag">XXXL</li>
+                                                    <li class="sku-add" id="add_size">
+                                                        <input type="text" class="add-text xd-input primary" id="new_size" />
+                                                        <a class="add-btn" id="add_new_size">添加</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sku-other">
+                                            <div class="sku-meta">
+                                                <div class="sku-table ">
+                                                    <table class="xd-table" id="new_sku_table">
+                                                        <thead>
+                                                        <tr>
+                                                            <td class="style">颜色</td>
+                                                            <td class="size">尺码</td>
+                                                            <td class="stock">库存</td>
+                                                            <td class="code">价格</td>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody id="new_sku">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="publish-action">
+                    <a class="xd-btn primary" id="save_submit">保存并上架</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

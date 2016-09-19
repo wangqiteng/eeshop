@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>蘑菇街后台管理</title>
+    <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="../js/add_items_details.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+	<div id="J_ManageNavBar" class="xd-manage-nav">
+    	<div class="content clearfix" data-reactid=".1">
+        	<a href="" class="logo fl"></a>
+            <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            	<div class="login fr">
+                	<div class="info fl">
+                    	<a href="#">蘑菇街</a>
+                        <span class="split">|</span>
+                        <a href="#">管理后台</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div id="J_ManageBody" class="xd-manage-body">
+    	<div class="content clearfix">
+        	<div id="J_Page" class="xd-manage-content fl">
+            	<div class="xd-goods-edit xd-page ">
+                	<div class="xd-header" style="height: 82px;">
+                    	<h1 class="xd-title" style="margin-top: 0px;margin-bottom: 0px;">填写商品信息</h1>
+                    </div>
+                    <div class="publish-content">
+                    	<div class="form">
+                        	<div class="field clearfix">
+                            	<label class="fl">类目</label>
+                                <div class="field-content fl" style="position:relative;">
+                                	<span>
+                                    	<span id="part_parent">女装</span>
+                                        <i>></i>
+                                    </span>
+                                    <span>
+                                    	<span id="part_children">背心</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field clearfix field-goods-title">
+                            	<label class="fl">
+                                	<span>标题</span>
+                                    <b class="high">*</b>
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="field-content fl">
+                                	<div class="goods-title">
+                                    	<input class="title-input xd-input primary" placeholder="请简洁的说明这是什么商品，标题30字以内。" maxlength="30" id="items_name"/>
+                                        <span class="high ml20 goods-title-tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field clearfix">
+                            	<label class="fl">
+                                	<span>简述</span>
+                                    <b class="high">*</b>
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="field-content fl">
+                                	<div class="goods-desc">
+                                    	<textarea class="desc-input xd-textarea" placeholder="请简单描述该商品。" id="items_describe"/></textarea>
+                                        <span class="high"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field clearfix">
+                            	<label class="fl">
+                                	<span>标签</span>
+                                    <b class="high">*</b>
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="field-content fl">
+                                	<div class="goods-tags">
+                                    	<div class="add-tag">
+                                        	<ul style="padding-left: 0px;" id="label_ul">
+                                                <li class="action" id="add_label">
+                                                	<input class="goods-tag-name xd-input primary" id="new_label" placeholder="请输入标签名称" />
+                                                    <a class="add-btn" id="add_new_label">添加</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="desc">标签将成为搜索关键字，标签不多于7个</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="field clearfix">
+                            	<label class="fl">
+                                	<span>封面图</span>
+                                    <b class="high">*</b>
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="field-content fl">
+                                	<div class="cover-images-wrap">
+                                    	<span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <div>
+                                        	<div class="cover-images">
+                                            	<ul class="clearfix sort-wrap hide" style="left:43%" >
+                                                	<li class="sort-li">
+                                                    	<div class="upload-image">
+                                                        	<img class="img" id="main_picture" src="" width="100" />
+                                                        </div>
+                                                        <a href="javascript:;" class="close-btn" id="delete_main_picture">x</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        	<div class="cover-upload-choose">
+                                                <div>
+                                                    <a class="xd-btn primary xd-upload-btn">
+                                                        <span>上传图片</span>
+                                                        <form method="post">
+                                                            <input type="file" class="file" id="upload_main_picture" accept="image/png,image/jpg,image/jpeg,image/gif"  id="upload_main_picture"/>
+                                                        </form>
+                                                    </a>
+                                                    <div>
+                                                        <span style="color:#ff6666;">*</span>
+                                                        <span>封面图只能有一张,图片宽高比例在9:16-16:9之间,宽度不小于640</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field clearfix">
+                            	<label class="fl">
+                                	<span>SKU设置</span>
+                                    <b class="high">*</b>
+                                    <span>&nbsp;</span>
+                                </label>
+								<div class="field-content fl">
+                                	<div class="sku-setting">
+                                    	<div class="setting-content">
+                                        	<div class="sku-data">
+                                            	<div class="style-list list clearfix" style="display: block;">
+                                                	<label class="fl">颜色</label>
+                                                    <ul class="fl" id="style_ul">
+                                                    	<li class="xd-tag">黑色</li>
+                                                        <li class="xd-tag">白色</li>
+                                                        <li class="xd-tag">灰色</li>
+                                                        <li class="xd-tag">蓝色</li>
+                                                        <li class="xd-tag">红色</li>
+                                                        <li class="xd-tag">黄色</li>
+                                                        <li class="xd-tag">紫色</li>
+                                                        <li class="sku-add" id="add_style">
+                                                        	<input type="text" class="add-text xd-input primary" id="new_style" />
+                                                            <a class="add-btn" id="add_new_style">添加</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="size-list list clearfix" style="display: block;">
+                                                	<label class="fl">尺码</label>
+                                                    <ul class="f1" id="size_ul">
+                                                    	<li class="xd-tag">XXS</li>
+                                                        <li class="xd-tag">XS</li>
+                                                        <li class="xd-tag">S</li>
+                                                        <li class="xd-tag">M</li>
+                                                        <li class="xd-tag">L</li>
+                                                        <li class="xd-tag">XL</li>
+                                                        <li class="xd-tag">XXL</li>
+                                                        <li class="xd-tag">XXXL</li>
+                                                        <li class="sku-add" id="add_size">
+                                                        	<input type="text" class="add-text xd-input primary" id="new_size" />
+                                                            <a class="add-btn" id="add_new_size">添加</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="sku-other">
+                                            	<div class="sku-meta">
+                                                	<div class="sku-table ">
+                                                    	<table class="xd-table" id="new_sku_table">
+                                                        	<thead>
+                                                            	<tr>
+                                                                	<td class="style">颜色</td>
+                                                                    <td class="size">尺码</td>
+                                                                    <td class="stock">库存</td>
+                                                                    <td class="code">价格</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="new_sku">
+                                                            	
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field clearfix">
+                            	<label class="fl">
+                                	<span>商品属性</span>
+                                    <b class="high"></b>
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="field-content fl">
+                                	<div class="goods-prop">
+                                    	<p class="mb10" style="margin-top: 0px;">商品属性纳入搜索范围</p>
+                                        <div class="props">
+                                        	<div class="prop clearfix">
+                                            	<label class="fl">
+                                                	<span>材质</span>
+                                                    <span class="high">*</span>
+                                                </label>
+                                                <div class="prop-content fl">
+                                                	<div class="prop-select">
+                                                    	<select class="xd-select" id="material">
+                                                        	<option value>选择</option>
+                                                            <option value="棉">棉</option>
+                                                            <option value="针织">针织</option>
+                                                            <option value="化纤">化纤</option>
+                                                            <option value="锦纶">锦纶</option>
+                                                            <option value="天丝">天丝</option>
+                                                            <option value="真丝">真丝</option>
+                                                            <option value="涤纶">涤纶</option>
+                                                            <option value="蚕丝">蚕丝</option>
+                                                            <option value="其他">其他</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="prop clearfix">
+                                            	<label class="fl">
+                                                	<span>衣长</span>
+                                                    <span class="high">*</span>
+                                                </label>
+                                                <div class="prop-content fl">
+                                                	<div class="prop-select">
+                                                    	<select class="xd-select" id="length">
+                                                        	<option value>选择</option>
+                                                            <option value="超短款">超短款</option>
+                                                            <option value="短款">短款</option>
+                                                            <option value="常规款">常规款</option>
+                                                            <option value="中长款">中长款</option>
+                                                            <option value="长款">长款</option>
+                                                            <option value="加长款">加长款</option>
+                                                            <option value="其他">其他</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="prop clearfix">
+                                            	<label class="fl">
+                                                	<span>版型</span>
+                                                    <span class="high">*</span>
+                                                </label>
+                                                <div class="prop-content fl">
+                                                	<div class="prop-select">
+                                                    	<select class="xd-select" id="typeversion">
+                                                        	<option value>选择</option>
+                                                            <option value="宽松">宽松</option>
+                                                            <option value="直筒">直筒</option>
+                                                            <option value="修身">修身</option>
+                                                            <option value="立体裁剪（不规则）">立体裁剪（不规则）</option>
+                                                            <option value="假两件">假两件</option>
+                                                            <option value="其他">其他</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <div class="prop clearfix">
+                                            	<label class="fl">
+                                                	<span>风格</span>
+                                                    <span class="high">*</span>
+                                                </label>
+                                                <div class="prop-content fl">
+                                                	<div class="prop-select">
+                                                    	<select class="xd-select" id="schools">
+                                                        	<option value>选择</option>
+                                                            <option value="田园">田园</option>
+                                                            <option value="小清新">小清新</option>
+                                                            <option value="学院">学院</option>
+                                                            <option value="运动">运动</option>
+                                                            <option value="复古">复古</option>
+                                                            <option value="商务">商务</option>
+                                                            <option value="其他">其他</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <div class="prop clearfix">
+                                            	<label class="fl">
+                                                	<span>季节</span>
+                                                    <span class="high">*</span>
+                                                </label>
+                                                <div class="prop-content fl">
+                                                	<div class="prop-select">
+                                                    	<select class="xd-select" id="season">
+                                                        	<option value>选择</option>
+                                                            <option value="春">春</option>
+                                                            <option value="夏">夏</option>
+                                                            <option value="秋">秋</option>
+                                                            <option value="冬">冬</option>
+                                                            <option value="春秋">春秋</option>
+                                                            <option value="秋冬">秋冬</option>
+                                                            <option value="其他">其他</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field clearfix">
+                            	<label class="fl">
+                                	<span>商品配图</span>
+                                    <b class="high"></b>
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="field-content fl">
+                                	<div class="goods-detail">
+                                    	<div class="xd-panel">
+                                        	<div class="detail-body xd-panel-body">
+                                            	<div class="xd-panel">
+                                                	<div class="xd-panel-body">
+                                                    	<div class="detail-image-wrap">
+                                                        	<div class="detail-image">
+                                                            	<div class="desc-content">
+                                                                	<p>穿着效果</p>
+                                                                    <textarea class="xd-textarea" placeholder="穿着效果描述"></textarea>
+                                                                </div>
+                                                                <ul class="clearfix" id="wear_picture">
+                                                                	
+                                                                </ul>
+                                                            </div>
+                                                            <div class="upload-image-wrap">
+                                                            	<div class="upload-image">
+                                                                	<a class="xd-btn primary xd-upload-btn">
+                                                                    	<span>上传图片</span>
+                                                                        <form action="#" method="post" enctype="" target="">
+                                                                        	<input type="file" name="image" class="file"  id="upload_wear_picture" accept="image/png,image/jpg,image/jpeg,image/gif" id="upload_wear_picture"/>
+                                                                        </form>
+                                                                    </a>
+                                                                </div>
+                                                                <p>图片宽高比例在9:16 - 16:9之间并且宽度大于等于640</p>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publish-action">
+                    	<a class="xd-btn primary" id="save_submit">保存并上架</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

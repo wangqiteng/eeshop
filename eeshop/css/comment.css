@@ -1,0 +1,218 @@
+@charset "utf-8";
+/*收获评论页面样式*/
+
+/*华丽的分割线*/
+.splitLine {
+    style: "border:1 dashed #987cb9";
+    width: 75%;
+    color: #987cb9;
+
+}
+
+/*表格边框设置*/
+.tableStyle {
+    width: 75%;
+    border: 0;
+    cellspacing: 0;
+    cellpadding: 0;
+    border: 1px #aaa solid;
+}
+
+/*单元格内的文本显示方式*/
+.cell {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top; /*从顶端开始显示*/
+}
+
+/*设置表头文本样式*/
+.tableTitle {
+    display: inline-block;
+    text-align: left;
+    font-family: 'Microsoft Yahei';
+    font-size: 30px;
+}
+
+/*商品、标题文本样式*/
+.foodsStyle {
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+}
+
+/*提示信息文本样式*/
+.tips {
+    color: darkgray;
+    margin-top: 7px;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+}
+
+/*商品信息文本样式*/
+.foodsInfo {
+    position: relative;
+    display: inline-block;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+    color: black;
+    text-decoration: none; /*消除下划线*/
+    cursor: pointer; /*鼠标悬停变为小手形状*/
+}
+
+/*鼠标悬停在商品信息上时文本变色*/
+.foodsInfo:hover {
+    color: blue;
+}
+
+/*“晒图片”和“剩余字数”的背景色样式*/
+.commentBackground {
+    height: 30px;
+    width: 440px;
+    background: #EEF8FD;
+    font-family: 'Microsoft Yahei';
+}
+
+/*上传图片按钮样式*/
+.uploadPicture {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 20px;
+    background: #93B4C6;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*发布评论按钮样式*/
+.publishComment {
+    display: inline-block;
+    margin: auto; /*水平居中显示*/
+    width: 150px;
+    height: 40px;
+    line-height: 25px;
+    background: #5DADE2;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*所有的星级评分样式及其他*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: "Microsoft Yahei";
+}
+
+ul, li {
+    list-style: none;
+}
+
+.descriptionStar, .attitudeStar, .deliveryStar {
+    position: relative;
+    width: 300px;
+    height: 24px;
+    margin: 20px auto 0;
+}
+
+.descriptionStar span, .attitudeStar span, .deliveryStar span {
+    float: left;
+    height: 19px;
+    line-height: 19px;
+}
+
+.descriptionStar ul, .attitudeStar ul, .deliveryStar ul {
+    margin: 0 10px;
+}
+
+.descriptionStar li, .attitudeStar li, .deliveryStar li {
+    float: left;
+    width: 24px;
+    height: 22px;
+    text-indent: -9999px;
+    background: url('../images/comment/star.png') no-repeat;
+    cursor: pointer;
+}
+
+.descriptionStar li.on, .attitudeStar li.on, .deliveryStar li.on {
+    background-position: 0 -28px;
+}
+
+.descriptionStar p, .attitudeStar p, .deliveryStar p {
+    background: url('../images/comment/icon.gif') no-repeat;
+    padding: 10px 10px 0;
+    position: absolute;
+    top: 20px;
+    width: 159px;
+    height: 60px;
+    z-index: 100;
+}
+
+.descriptionStar p em, .attitudeStar p em, .deliveryStar p em {
+    color: #FF6600;
+    display: block;
+    font-style: normal;
+}
+
+.descriptionStar strong, .attitudeStar strong, .deliveryStar strong {
+    color: #ff6600;
+    padding-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*放大图片样式*/
+ul, li {
+    list-style: none;
+}
+
+.heartPic {
+    width: 0px;
+    height: 0px;
+    margin: 0px 0 0 0;
+}
+
+.heartPic ul {
+    float: left;
+    width: 200px;
+}
+
+.heartPic ul li {
+    float: left;
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.heartPic ul li.on {
+    z-index: 99;
+}
+
+.heartPic ul li.on .in {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 5px 5px 20px 5px;
+    background: #666;
+}
+
+.heartPic .showDiv {
+    display: block;
+}

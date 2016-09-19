@@ -1,0 +1,90 @@
+﻿/*公共样式定义*/
+/*靠右显示*/
+.fr {
+    float: right;
+}
+
+/*新开一行，靠右显示*/
+.cfr {
+    clear: both;
+    float: right;
+}
+
+/*靠左显示*/
+.fl {
+    float: left;
+}
+
+/*新开一行，靠左显示*/
+.cfl {
+    clear: both;
+    float: left;
+}
+
+/*靠底部显示*/
+.fb {
+    float: bottom;
+}
+
+/*新开一行，靠底部显示*/
+.cfb {
+    clear: both;
+    float: bottom;
+}
+
+/*清除格式*/
+.cf {
+    clear: both;
+}
+
+/*清除格式并居中显示*/
+.cfc {
+    clear: both;
+    text-align: center;
+}
+
+/*设置整个页面的外边距、内边距（上右下左）*/
+.bodyStyle {
+    margin: 0px 20px 20px 20px;
+    padding: 0px 20px 20px 20px;
+}
+
+/*标题栏的背景色样式”*/
+.titleBackground {
+    height: 30px;
+    width: 100%;
+    background: #F9F9F9;
+    font-family: 'Microsoft Yahei';
+}
+
+/*标题文本样式”*/
+.title {
+    display: inline-block;
+    letter-spacing: 3px;
+    height: 30px;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    color: white;
+    background-color: #FF4466;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.xd-manage-nav {
+	width:100%;
+	height:60px;
+	margin-bottom:1px;
+	background:#F9F9F9;
+}
+
+.xd-manage-nav .logo {
+	background:url(../images/foot-logo.png) no-repeat;
+	display:inline-block;
+	width:188px;
+	height:32px;
+	font:0/0 a;
+	margin-top:14px;
+	margin-left:20px
+}

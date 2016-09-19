@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../images/favicon.ico">
+<title>订单详情</title>
+<!-- Bootstrap core CSS -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="../../css/index.css">
+</head>
+<body>
+	<div class="head">
+		<div class="head-top">
+			<ul>
+				<li class="gouwuche"><a class="gwc" href="#"> 购物车
+						<ul class="gwctk">
+							<li>购物车里没有商品！</li>
+						</ul>
+				</a></li>
+				<li class="dingdan"><a class="dd" href="order.html">我的订单</a></li>
+				<li><a class="dl" href="login.html" id="login" name="login">登录</a></li>
+				<li><a class="zc" href="register.html" id="register" name="register">注册</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+
+	<div class="container">
+		<h1></h1>
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a
+					style="font-size: 24px">订单详情</a></li>
+				<li role="presentation"></li>
+				<li role="presentation"></li>
+			</ul>
+		</div>
+		<h1></h1>
+		<div class="container">
+			<h1></h1>
+			<div>
+				<label>交易状态：</label><span id="span_orderState"
+					name="span_orderState">交易完成 <a href="评价页面" target="new">立即评价</a></span>
+			</div>
+			<h1></h1>
+			<div>
+				<label>买家账号：</label><span id="span_buyerCount"
+					name="span_buyerCount">110</span>
+			</div>
+			<h1></h1>
+			<div>
+				<label>收货地址：</label><span id="span_address" name="span_address">浙江省杭州市杭州电子科技大学</span>
+			</div>
+			<h1></h1>
+			<div>
+				<label>买家留言：</label><span id="span_message" name="span_message">110</span>
+			</div>
+			<h1></h1>
+			<ul class="nav nav-tabs"></ul>
+			<h1></h1>
+			<div>
+				<label>交易信息</label>
+			</div>
+			<h1></h1>
+			<div style="text-align: center">
+				<table width="800" border="0">
+					<tr>
+						<td align="left" valign="middle">订单编号：<span id="span_orderID"
+							name="span_orderID">0123456789</span></td>
+						<td align="left" valign="middle">创建时间：<span
+							id="span_orderCreatTime" name="span_orderCreatTime">2016-6-30
+								4:56:25</span></td>
+					</tr>
+					<tr>
+						<td align="left" valign="middle">付款时间：<span
+							id="span_orderPayTime" name="span_orderPayTime">2016-6-30
+								4:59:25</span></td>
+						<td align="left" valign="middle">发货时间：<span
+							id="span_orderSendTime" name="span_orderSendTime">2016-6-30
+								14:56:25</span></td>
+					</tr>
+					<tr>
+						<td align="left" valign="middle">成交时间：<span
+							id="span_orderSuccessTime" name="span_orderSuccessTime">2016-7-1
+								12:56:25</span></td>
+						<td align="left" valign="middle">&nbsp;</td>
+					</tr>
+				</table>
+				<h1></h1>
+			</div>
+
+			<ul class="nav nav-tabs"></ul>
+			<h1></h1>
+			<div>
+				<label>商品信息</label>
+			</div>
+			<h1></h1>
+			<div style="text-align: center">
+				<table width="1000" border="0" cellpadding="5" cellspacing="10">
+					<tr>
+						<td width="40%" align="center">宝贝</td>
+						<td width="20%" align="center">单价</td>
+						<td width="20%" align="center">数量</td>
+						<td width="20%" align="center">实际付款</td>
+					</tr>
+					<tr>
+						<td align="left"><a href="商品地址" target="new"
+							style="display: inline"><img src="../images/hh-1.jpg" alt=""
+								height="67" width="67">棉鞋</a></td>
+						<td align="center" valign="middle">29.00</td>
+						<td align="center" valign="middle">1</td>
+						<td rowspan="2" align="center" valign="middle">127.00</td>
+					</tr>
+					<tr>
+						<td align="left"><a href="商品地址" target="new"
+							style="display: inline"><img src="../images/hh-14.png" alt=""
+								height="67" width="67">裙子</a></td>
+						<td align="center" valign="middle">49.00</td>
+						<td align="center" valign="middle">2</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街后台管理</title>
+    <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/onsale_items.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr">
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-edit xd-page ">
+                <div class="xd-header" style="height: 82px;">
+                    <h1 class="xd-title" style="margin-top: 0px;margin-bottom: 0px;">管理热卖商品</h1>
+                </div>
+                <div class="publish-content">
+                    <div class="form">
+                        <div class="field clearfix">
+                            <label class="fl">
+                                <span>热卖区</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div class="ppg" style="width: 960px;">
+                                    <div class="ppg-1">
+                                        <img src="../images/ppg-1.png" height="254" width="213"/>
+                                        <input type="button" value="更换1" class="change"/>
+                                    </div>
+                                    <div class="ppg-2">
+                                        <a>
+                                            <img src="../images/ppg-2.png" height="254" width="213"/>
+                                            <input type="button" value="更换2" class="change"/>
+                                        </a>
+                                    </div>
+                                    <div class="ppg-3">
+                                        <a>
+                                            <img src="../images/ppg-3.png"/>
+                                            <input type="button" value="更换3" class="change"/>
+                                        </a>
+                                    </div>
+                                    <div class="ppg-4">
+                                        <a>
+                                            <img src="../images/ppg-4.png"/>
+                                            <input type="button" value="更换4" class="change"/>
+                                        </a>
+                                    </div>
+                                    <div class="ppg-5">
+                                        <a>
+                                            <img src="../images/ppg-5.png"/>
+                                            <input type="button" value="更换5" class="change"/>
+                                        </a>
+                                    </div>
+                                    <div class="ppg-6">
+                                        <a>
+                                            <img src="../images/ppg-6.png"/>
+                                            <input type="button" value="更换6" class="change"/>
+                                        </a>
+                                    </div>
+                                    <div class="ppg-7">
+                                        <a>
+                                            <img src="../images/ppg-7.png"/>
+                                            <input type="button" value="更换7" class="change"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field clearfix hide" style="margin-top: 70px;" id="test">
+                            <label class="fl">
+                                <span>验证商品</span>
+                                <span>&nbsp;</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div>
+                                    <div>
+                                        <ul style="padding-left: 0px;">
+                                            <li class="action">
+                                                <input class="goods-tag-name xd-input primary" id="items_id"
+                                                       placeholder="请输入商品编号"/>
+                                                <a href="#" class="test-btn" id="test_items">验证</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="desc" id="result">请输入商品编号，验证商品是否在架</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field clearfix hide" id="upload_onsale">
+                            <label class="fl">
+                                <span>上传图片</span>
+                                <span>&nbsp;</span>
+                            </label>
+                            <div class="field-content fl">
+                                <div class="cover-images-wrap">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div>
+                                        <div class="cover-images">
+                                            <ul class="clearfix sort-wrap hide" style="left:43%">
+                                                <li class="sort-li">
+                                                    <div class="upload-image">
+                                                        <img class="img" id="onsale_picture" src="" width="100"/>
+                                                    </div>
+                                                    <a href="javascript:;" class="close-btn"
+                                                       id="delete_main_picture">x</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cover-upload-choose">
+                                            <div>
+                                                <a class="xd-btn primary xd-upload-btn">
+                                                    <span>上传图片</span>
+                                                    <form method="post">
+                                                        <input type="file" class="file" id="upload_main_picture"
+                                                               accept="image/png,image/jpg,image/jpeg,image/gif"
+                                                               id="upload_main_picture"/>
+                                                    </form>
+                                                </a>
+                                                <div>
+                                                    <span style="color:#ff6666;">*</span>
+                                                    <span id="msg_onsale">图片宽高比例在9:16-16:9之间,宽度不小于640</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="publish-action hide" id="operation">
+                    <a class="xd-btn primary" id="save_submit">保存</a>
+                    <a class="xd-btn primary" id="cancel">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

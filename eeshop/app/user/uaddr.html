@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街&nbsp;-&nbsp;我的买手街！</title>
+    <link href="../../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../../css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/udata.css"/>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+	<script type="text/javascript" src="../../js/userinfo.js"></script>
+</head>
+<body>
+
+<div class="mgj_rightbar">
+    <div class="mgj-my-cart">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">购物车</div>
+        </a>
+    </div>
+    <div class="mgj-my-coupon">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">优惠券</div>
+        </a>
+    </div>
+    <div class="mgj-my-wallet">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">钱包</div>
+        </a>
+    </div>
+    <div class="mgj-my-browserlog">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">足迹</div>
+        </a>
+    </div>
+    <div class="sideBottom">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+        </a>
+    </div>
+
+
+</div>
+<div class="head">
+    <div class="head-top">
+        <ul>
+            <li class="dingdan"><a class="dd" href="order.html">我的订单</a></li>
+            <li><a class="dl" href="#" style="color:#F00">退出</a></li>
+            <li><a class="dl" href="udata.html" id="login" name="login">江宁超</a></li>
+        </ul>
+
+
+    </div>
+    <div class="head-main">
+        <a href="../../index.html"> <img class="logo" src="../../images/head-top-logo.png"/></a>
+    </div>
+    <div class="head-foot">
+        <ul class="daohang">
+            <li class="sk"><a href="udata.html">我的信息</a></li>
+        </ul>
+        <ul class="daohang">
+            <li class="sk"><a href="uaddr.html">新增收货地址</a></li>
+        </ul>
+        <ul class="daohang">
+            <li class="sk"><a href="uphoto.html">更换头像</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="main"> 
+	<div id="body" class="fm960">
+    	<div class="mu_wrap clearfix">
+            <div class="mu_nav_wrap">
+                <div class="mu_nav_info">
+                    <div class="mu_nav_info_avatar">
+                        <div class="mu_nav_info_avatar_mk"></div>
+                        <img src="../../images/detailimage/user1.jpg" width="100" height="100" title="江宁超">
+                    </div>
+                    <p align="center">江宁超</p>
+                </div>
+            </div>
+            
+            <div class="mu_content_wrap">
+                <div id="setting_box" class="f1">     
+                    <div id="setting_form" class="setting_basic">
+                    	<form id="addr_form" method="post">
+                        	 <div class="settings_title">
+                        		<span>收货地址</span>
+                    		</div>
+                            <dl class="address">
+                            	<dd>新增收货地址</dd>
+                                <dt>
+                                	<h5>（请注意,以下所有项目均为必填项！）</h5>
+                                </dt>
+                                </br>
+                                <dd>省市区(必填):</dd>
+                                <dt class="location">
+        							<select id="province" name="province">
+                                    	<option value="">请选择省份</option>
+                                    	<option value="浙江">浙江</option>
+                                        <option value="江苏">江苏</option>
+                                        <option value="安徽">安徽</option>
+                                        <option value="上海">上海</option>
+                                        <option value="福建">福建</option>
+                                        <option value="广东">广东</option>
+                                    </select>&nbsp;省&nbsp;
+        							<select id="city" name="city">
+                                    	<option value="">请选择城市</option>
+                                    </select>&nbsp;市&nbsp;
+                                    <select id="area" name="area">
+                                    	<option value="">请选择地区</option>
+                                    </select>&nbsp;区&nbsp;
+    							</dt>
+                                <dd>邮政编码(必填):</dd>
+                                <dt class="postcode">
+                                	<input class="r3" type="text" name="postcode" id="postcode" onblur="validatePostcode()"/><span style="color:#F00" id="msg_postcode"></span>
+                                </dt>
+                                <dd>街道地址(必填):</dd>
+                                <dt>
+                                	<textarea  name="street" id="street" class="r3" placeholder="建议您如实填写详细收货地址！" onblur="validateStreet()"></textarea><span style="color:#F00" id="msg_street"></span>
+                                </dt>
+                                <dd>收货姓名(必填):</dd>
+                                <dt class="rname" style="padding-top:5px;">
+                                	<input class="r3" type="text" name="rname" id="rname" onblur="validateRname()"><span style="color:#F00" id="msg_rname"></span>
+                                </dt>
+                                <dd>收货电话(必填):</dd>
+                                <dt class="pnum" style="padding-top:5px;">
+                                	<input class="r3" type="text" name="pnum" id="pnum" onblur="validatePnum()"><span style="color:#F00" id="msg_pnum"></span>
+                                </dt>
+                                <dd>&nbsp;&nbsp;</dd>
+                                <dt>
+                                	<input type="checkbox"  />是否设为默认收货地址
+                                </dt>
+                                <dd>&nbsp;</dd>
+                                <dt>
+                                	 <input class="green_button r3" type="submit" value="提交"  />
+                                </dt> 
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="foot">
+    <div class="foot-top banxin">
+        <div class="foot-top-l">
+            <div class="foot-logo">
+                <a href="#"><img src="../../images/foot-logo.png"/></a>
+            </div>
+            <p class="xukezheng">
+                营业执照注册号：<a href="#">330106000129004</a>
+            </p>
+            <p class="xukezheng">
+                增值电信业务经营许可证：<a href="#">浙B2-20110349</a>
+            </p>
+            <p class="xukezheng">
+                ICP备案号：浙ICP备10044327号-3
+            </p>
+            <p class="xukezheng">
+                ©2015 Mogujie.com 杭州卷瓜网络有限公司
+            </p>
+
+        </div>
+        <div class="foot-top-r">
+            <dl>
+                <dt>公司</dt>
+                <dd><a href="#">关于我们</a></dd>
+                <dd><a href="#">招聘信息</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+            </dl>
+            <dl>
+                <dt>消费者</dt>
+                <dd><a href="#">帮助中心</a></dd>
+                <dd><a href="#">意见反馈</a></dd>
+                <dd><a href="#">手机版下载</a></dd>
+            </dl>
+
+            <dl>
+                <dt>管理员入口</dt>
+                <dd><a href="#">管理员登录</a></dd>
+                <dd><a href="#">管理后台</a></dd>
+            </dl>
+
+            <dl>
+                <dt>商家</dt>
+                <dd><a href="" target="_blank">蘑菇街学院</a>
+                </dd>
+
+            </dl>
+        </div>
+
+    </div>
+    <div class="foot-bottom banxin">
+        <dl>
+            <dt>友情链接:</dt>
+            <dd><a href="#">淘粉吧</a></dd>
+            <dd><a href="#">蘑菇街团购网</a></dd>
+            <dd><a href="#">蘑菇街女装</a></dd>
+            <dd><a href="#">蘑菇街男装</a></dd>
+            <dd><a href="#">蘑菇街鞋子</a></dd>
+            <dd><a href="#">蘑菇街包包</a></dd>
+            <dd><a href="#">蘑菇街家居</a></dd>
+            <dd><a href="#">家具网</a></dd>
+            <dd><a href="#">装修</a></dd>
+            <dd><a href="#">蘑菇街母婴</a></dd>
+            <dd><a href="#">衣联网</a></dd>
+        </dl>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

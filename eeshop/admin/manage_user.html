@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街后台管理</title>
+    <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/manage_items.js"></script>
+    <script src="../js/layer/layer.js"></script>
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr">
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-publish xd-page">
+                <div class="xd-header">
+                    <h1 class="xd-title">用户管理</h1>
+                </div>
+                <div id="wrapper">
+                    <div id="page-wrapper">
+                        <div class="col-md-12 graphs">
+                            <div class="xs">
+                                <div style="font-weight: bolder;margin: 0 auto;text-align:center;padding: 10px;color: #555">
+                                    账户管理
+                                </div>
+                                <div>
+                                    <input class="search_box" type="text" placeholder="用户id/用户名"/>
+                                    <a href="#" target="_blank"><input class="search_button" type="button" id="search"
+                                                                       name="search"/></a>
+                                </div>
+                                <div style="margin-top:80px" class="bs-example4" data-example-id="contextual-table">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>用户id</th>
+                                            <th>用户名</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="info">
+                                            <th scope="row">1</th>
+                                            <td>10001</td>
+                                            <td>13588030001</td>
+                                            <td>
+                                                <div>
+                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                           onclick="look()">
+                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                           value="冻结账户" onclick="freeze()">
+                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                           value="解冻账户" onclick="thaw()">
+                                                    <input type="button" class="btn  btn-danger" name="delete"
+                                                           value="删除账户" onclick="deleteUser()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>10002</td>
+                                            <td>13588030002</td>
+                                            <td>
+                                                <div>
+                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                           onclick="look()">
+                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                           value="冻结账户" onclick="freeze()">
+                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                           value="解冻账户" onclick="thaw()">
+                                                    <input type="button" class="btn  btn-danger" name="delete"
+                                                           value="删除账户" onclick="deleteUser()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="info">
+                                            <th scope="row">3</th>
+                                            <td>10003</td>
+                                            <td>13588030003</td>
+                                            <td>
+                                                <div>
+                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                           onclick="look()">
+                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                           value="冻结账户" onclick="freeze()">
+                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                           value="解冻账户" onclick="thaw()">
+                                                    <input type="button" class="btn  btn-danger" name="delete"
+                                                           value="删除账户" onclick="deleteUser()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>10004</td>
+                                            <td>13588030004</td>
+                                            <td>
+                                                <div>
+                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                           onclick="look()">
+                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                           value="冻结账户" onclick="freeze()">
+                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                           value="解冻账户" onclick="thaw()">
+                                                    <input type="button" class="btn  btn-danger" name="delete"
+                                                           value="删除账户" onclick="deleteUser()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="info">
+                                            <th scope="row">5</th>
+                                            <td>10005</td>
+                                            <td>13588030005</td>
+                                            <td>
+                                                <div>
+                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                           onclick="look()">
+                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                           value="冻结账户" onclick="freeze()">
+                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                           value="解冻账户" onclick="thaw()">
+                                                    <input type="button" class="btn  btn-danger" name="delete"
+                                                           value="删除账户" onclick="deleteUser()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>10006</td>
+                                            <td>13588030006</td>
+                                            <td>
+                                                <div>
+                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                           onclick="look()">
+                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                           value="冻结账户" onclick="freeze()">
+                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                           value="解冻账户" onclick="thaw()">
+                                                    <input type="button" class="btn  btn-danger" name="delete"
+                                                           value="删除账户" onclick="deleteUser()">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="J_ManageSideBar" class="xd-manage-slide fl">
+            <div>
+                <div class="box">
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>用户管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a  href="manage_user.html" target="_self" style="color:#FF5555">账户管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>订单管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="order.html" target="_self">订单管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>商品管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="add_items.html" target="_self">发布新商品</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="manage_items.html" target="_self">在售商品管理</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="onsale_items.html" target="_blank">热卖广告位</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+
+    /*查看账户*/
+    function look(){
+        window.location.href="user_detail.html";
+    }
+
+    /*冻结账户*/
+    function freeze(){
+        layer.msg('冻结成功！', {
+            time: 1500, 												//1.5s后自动关闭
+        });
+    }
+
+    /*解冻账户*/
+    function thaw(){
+        layer.msg('解冻成功！', {
+            time: 1500, 												//1.5s后自动关闭
+        });
+    }
+
+    /*删除账户*/
+    function deleteUser(){
+        layer.msg('删除成功！', {
+            time: 1500, 												//1.5s后自动关闭
+        });
+    }
+</script>
+</html>

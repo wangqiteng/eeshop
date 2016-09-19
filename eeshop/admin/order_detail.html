@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街后台管理</title>
+
+    <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <link href="../css/admincss/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/admincss/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/daterangepicker.js"></script>
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr">
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-publish xd-page">
+                <div class="xd-header">
+                    <h1 class="xd-title">订单明细列表</h1>
+                </div>
+                <div id="wrapper">
+                    <div id="page-wrapper">
+                        <div style="font-weight: bolder;margin: 0 auto;text-align:center;padding: 10px;color: #555">
+                            订单明细
+                        </div>
+                        <div style="margin-top:20px" data-example-id="contextual-table">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>订单id</th>
+                                    <th>订单编号</th>
+                                    <th>日期</th>
+                                    <th>商品名称</th>
+                                    <th>单价</th>
+                                    <th>数量</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="info">
+                                    <th scope="row">1</th>
+                                    <td>10001</td>
+                                    <td>100000000000000001</td>
+                                    <td>2016-01-01 08:00:00</td>
+                                    <td>夏季九分裤男士牛仔裤男修身破洞小脚裤林弯弯浅色哈伦乞丐裤薄款</td>
+                                    <td>79</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>10001</td>
+                                    <td>100000000000000001</td>
+                                    <td>2016-01-01 08:00:00</td>
+                                    <td>mimius2016夏新款韩国时尚休闲阔腿裤女长裤金属扣宽松裤潮M5813</td>
+                                    <td>122</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="info">
+                                    <th scope="row">3</th>
+                                    <td>10001</td>
+                                    <td>100000000000000001</td>
+                                    <td>2016-01-01 08:00:00</td>
+                                    <td>日系水洗刮烂补丁九分裤青少年小脚哈伦裤夏季男士牛仔裤潮9分裤</td>
+                                    <td>85</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>10001</td>
+                                    <td>100000000000000001</td>
+                                    <td>2016-01-01 08:00:00</td>
+                                    <td>Karaamoo/韩萌2016夏季新款韩版宽松一字领中袖显瘦条纹衬衫女</td>
+                                    <td>56</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="info">
+                                    <th scope="row">5</th>
+                                    <td>10001</td>
+                                    <td>100000000000000001</td>
+                                    <td>2016-01-01 08:00:00</td>
+                                    <td>夏季学生褂子修身男装款棒球服潮牌夹克男士休闲防晒服帅气外套秋</td>
+                                    <td>79</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>10001</td>
+                                    <td>100000000000000001</td>
+                                    <td>2016-01-01 08:00:00</td>
+                                    <td>2016新款春秋冬装男士jacket薄款男装毛呢外套潮韩版修身皮夹克男</td>
+                                    <td>269</td>
+                                    <td>1</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="J_ManageSideBar" class="xd-manage-slide fl">
+            <div>
+                <div class="box">
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>用户管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="manage_user.html" target="_self">账户管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>订单管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="order.html" target="_self" style="color:#FF5555">订单管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>商品管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="add_items.html" target="_self">发布新商品</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="manage_items.html" target="_self">在售商品管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

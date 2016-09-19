@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街后台管理</title>
+    <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/manage_items.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr">
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-publish xd-page">
+                <div class="xd-header">
+                    <h1 class="xd-title">在线商品管理</h1>
+                </div>
+                <div class="xd-body">
+                    <div class="xd-search xd-mrg-bottom-1">
+                        <form>
+                            <ul class="clearfix">
+                                <li>
+                                    <span>商品标题:</span>
+                                    <input class="xd-input primary" placeholder="商品标题" id="items_name"/>
+                                </li>
+                                <li>
+                                    <span>商品编号:</span>
+                                    <input class="xd-input primary" placeholder="商品编号" id="items_id"/>
+                                </li>
+                                <li>
+                                    <span>价格范围:</span>
+                                    <span><input class="xd-input primary" id="price_start"/></span>
+                                    <span class="m-date-line">～</span>
+                                    <span><input class="xd-input primary" id="price_end"/></span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="btn-line">
+                        <div align="center">
+                            <a href="#" class="xd-btn primary" id="query_items">查询</a>
+                            <a href="#" class="xd-btn primary" id="empty">清空</a>
+                        </div>
+                    </div>
+                    <div class="xd-goods-list">
+                        <div class="xd-section">
+                            <p class="no-result">未查询到相关内容~</p>
+                        </div>
+                    </div>
+                    <div class="manage_table">
+                        <table class="xd-table">
+                            <thead>
+                            <tr>
+                                <td><input type="checkbox" onclick="selectAll(this)">全选</td>
+                                <td>商品编号</td>
+                                <td>标题</td>
+                                <td>上架时间</td>
+                                <td>平均价格</td>
+                                <td>操作</td>
+                            </tr>
+                            </thead>
+                            <tbody id="items">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="check_this">
+                                </td>
+                                <td>
+                                    <span>8001</span>
+                                </td>
+                                <td style="overflow:hidden">
+                                    <span>夏季吊带可爱卡通...</span>
+                                </td>
+                                <td>
+                                    <span>2016-10-10</span>
+                                </td>
+                                <td>
+                                    <span>200</span>
+                                </td>
+                                <td>
+                                    <a href="manage_items_details.html" target="_self"><input type="button" value="编辑"/></a>
+                                    <input type="button" value="下架" id="delete_items"/>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </br>
+                        <a href="manage_items.html" target="_self"></a>  <input type="button" value="批量下架" id="delete_some_items"/>
+                        <div class="digg">
+                            <span class="disabled">&lt; </span>
+                            <span class="current">1</span>
+                            <a href="#?page=2" class="page">2</a>
+                            <a href="#?page=3" class="page">3</a>
+                            <a href="#?page=4" class="page">4</a>
+                            <a href="#?page=5" class="page">5</a>
+                            <a href="#?page=6" class="page">6</a>
+                            <a href="#?page=7" class="page">7</a>
+                            ...
+                            <a href="#?page=199" class="page">199</a>
+                            <a href="#?page=200" class="page">200</a>
+                            <a href="#?page=2" id="next_page">&gt; </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="J_ManageSideBar" class="xd-manage-slide fl">
+            <div>
+                <div class="box">
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>用户管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="manage_user.html" target="_self">账户管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>订单管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="order.html" target="_self">订单管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>商品管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="add_items.html" target="_self">发布新商品</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="manage_items.html" target="_self" style="color:#FF5555">在售商品管理</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="onsale_items.html" target="_blank">热卖广告位</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

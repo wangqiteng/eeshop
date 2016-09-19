@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../../images/favicon.ico">
+    <title>登录页面</title>
+
+    <script type="text/javascript" src="../../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../css/index.css"/>
+    <style type="text/css">
+
+        /*输入框置于右端*/
+        .position_control {
+            position: relative;
+            top: 40px;
+            left: 900px;
+        }
+
+        /*输入框大小设置*/
+        .size_control {
+            width: 200px;
+        }
+
+        /*容器设置*/
+        .container_control {
+            position: relative;
+            background-image: url(../../images/banner2.jpg);
+            width: 1300px;
+            height: 500px;
+            background-repeat: no-repeat;
+        }
+
+        /*忘记密码设置*/
+        .lostpassword_control {
+            color: #F00;
+            position: relative;
+            left: 100px;
+        }
+    </style>
+    <script src="../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+
+    <script language="javascript">
+
+        var patt_userName = /^[\u4E00-\u9FFF0-9a-zA-Z_]{4,}$/;//用户名至少4个字符
+        var patt_password = /^[0-9a-zA-Z_]{6,}$/;//密码至少6位
+
+        function login() {
+            document.getElementById('message_userName').innerHTML = '';
+            document.getElementById('message_psaaword').innerHTML = '';
+            var userName = document.getElementById('input_Username');
+            var password = document.getElementById('input_Password');
+            var flag = true;
+            if (!patt_userName.test(userName.value)) {
+                document.getElementById('message_userName').innerHTML = '✘用户名错误';
+                flag = false;
+            }
+            if (!patt_password.test(password.value)) {
+                document.getElementById('message_psaaword').innerHTML = '✘密码错误';
+                flag = false;
+            }
+            if (flag) {
+                layer.msg('登陆成功！', {
+                    time: 1500, 												//1.5s后自动关闭并跳转到首页
+                });
+                setTimeout("javascript:location.href='../../index.html'", 1500);
+            }
+            else{
+                layer.msg('登陆失败！', {
+                    time: 1500, 												//1.5s后自动关闭
+                });
+            }
+        }
+        /*//用户名验证JQ的写法
+         $(document).ready(function() {
+
+         $("#username").blur(function() {
+         $.ajax({
+         type : "get",
+         url : "reg.jsp",
+         data : "username=" + $(this).val(),
+         beforeSend : function(msg) {
+         $("#span_loading").html("<img src='img/loading.gif'/>");
+         },
+         success : function(msg) {
+         $("#span_loading").html(msg);
+         }
+         })
+         })
+
+         $("#button_submit").click(function(e) {
+         $.get("reg.jsp", {
+         username : $("input_username").val()
+         }, function(msg) {
+         alert(msg);
+         });
+         });
+         });*/
+    </script>
+</head>
+
+<body>
+<div style="margin-bottom: 30px;margin-left: 30px">
+    <a href="../../index.html"><img src="../../images/new-icon.png" /></a>
+</div>
+<div class="container container_control" style="margin-left: 30px;width: 80%">
+    <form class="form-signin">
+        <h2 class="form-signin-heading position_control size_control">账户登陆</h2>
+        <label for="inputEmail" class="sr-only">Email address</label> <input
+            type="text" id="input_Username"
+            class="form-control position_control size_control" placeholder="用户名"
+            required autofocus><span class="position_control" style="color:#F00" id="message_userName"></span>
+        </p>
+        <label for="inputPassword" class="sr-only">Password</label> <input
+            type="password" id="input_Password"
+            class="form-control position_control size_control" placeholder="密码"
+            required><span class="position_control" style="color:#F00" id="message_psaaword"></span>
+        <div class="checkbox  position_control size_control">
+            <label> <input type="checkbox" value="remember-me">
+                记住我
+            </label> <label style="position: relative; left: 60px"> <a
+                href="findPassw.html" target="_blank">忘记密码</a></label>
+        </div>
+        <button
+                class="btn btn-lg btn-primary btn-block position_control size_control"
+                type="button" id="button_submit" onClick="login()">登陆
+        </button>
+        </br> <a href="register.html" target="_blank" class="position_control"
+                 style="color: #F00">立即注册</a>
+    </form>
+</div>
+<div class="foot">
+    <div class="foot-top banxin">
+        <div class="foot-top-l">
+            <div class="foot-logo">
+                <a href="#"><img src="../../images/foot-logo.png"/></a>
+            </div>
+            <p class="xukezheng">
+                营业执照注册号：<a href="#">330106000129004</a>
+            </p>
+            <p class="xukezheng">
+                增值电信业务经营许可证：<a href="#">浙B2-20110349</a>
+            </p>
+        </div>
+        <div class="foot-top-r">
+            <dl>
+                <dt>公司</dt>
+                <dd><a href="#">关于我们</a></dd>
+                <dd><a href="#">招聘信息</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+            </dl>
+            <dl>
+                <dt>消费者</dt>
+                <dd><a href="#">帮助中心</a></dd>
+                <dd><a href="#">意见反馈</a></dd>
+                <dd><a href="#">手机版下载</a></dd>
+            </dl>
+
+            <dl>
+                <dt>管理员入口</dt>
+                <dd><a href="#">管理员登录</a></dd>
+            </dl>
+
+            <dl>
+                <dt>商家</dt>
+                <dd><a href="" target="_blank">蘑菇街学院</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+</body>
+</html>

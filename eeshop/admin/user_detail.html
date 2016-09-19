@@ -1,0 +1,164 @@
+<!--<!DOCTYPE HTML>
+<html>
+<head>
+    <title>订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    &lt;!&ndash; Bootstrap Core CSS &ndash;&gt;
+    <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <link href="../css/admincss/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/admincss/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="all"  />
+    &lt;!&ndash; jQuery &ndash;&gt;
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/daterangepicker.js"></script>
+</head>
+<body>
+&lt;!&ndash;header&ndash;&gt;
+<header>
+    <h1><img src="../images/admin_logo.png"/></h1>
+    <ul class="rt_nav">
+        <li><a href="admin.html" class="website_icon">站点首页</a></li>
+        <li><a href="#" class="set_icon">账号设置</a></li>
+        <li><a href="#" class="quit_icon">安全退出</a></li>
+    </ul>
+</header>
+&lt;!&ndash;aside nav&ndash;&gt;
+<aside class="lt_aside_nav content mCustomScrollbar">
+    <h2><a href="admin.html">起始页</a></h2>
+    <ul>
+        <li>
+            <dl>
+                <dt>用户管理</dt>
+                <dd><a href="order.html" id="order" >订单列表</a></dd>
+                <dd><a href="manage_user.html" id="order_detail" style="color: #0c9c6e">账户管理</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><a href="add_items.html">商品管理入口</a></dt>
+            </dl>
+        </li>
+
+        <p class="btm_infor">© 蘑菇街 版权所有</p>
+        </li>
+    </ul>
+</aside>
+
+<section class="rt_wrap content mCustomScrollbar">
+    <div class="rt_content" id="mainText" style="font-family: Microsoft Yahei">-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街后台管理</title>
+
+    <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="../css/admincss/backstage_items.css"/>
+    <link href="../css/admincss/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/admincss/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/daterangepicker.js"></script>
+</head>
+<body class="pace-done" style="background-color: rgb(204, 232, 207);">
+<div id="J_ManageNavBar" class="xd-manage-nav">
+    <div class="content clearfix" data-reactid=".1">
+        <a href="" class="logo fl"></a>
+        <div id="J_UserInfo" class="xd-manage-userinfo fr">
+            <div class="login fr">
+                <div class="info fl">
+                    <a href="#">蘑菇街</a>
+                    <span class="split">|</span>
+                    <a href="#">管理后台</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_ManageBody" class="xd-manage-body">
+    <div class="content clearfix">
+        <div id="J_Page" class="xd-manage-content fl">
+            <div class="xd-goods-publish xd-page">
+                <div class="xd-header">
+                    <h1 class="xd-title">账户详细信息</h1>
+                </div>
+        <div id="wrapper">
+            <div id="page-wrapper">
+                <div style="font-weight: bolder;margin: 0 auto;text-align:center;padding: 10px;color: #555">账户详细信息</div>
+                        <div style="margin-top:20px" data-example-id="contextual-table">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>用户id</td>
+                                    <td>10001</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>用户名</td>
+                                    <td>13588030001</td>
+                                </tr>
+                                <tr>
+                                    <td>性别</td>
+                                    <td>男</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>真实姓名</td>
+                                    <td>胡歌</td>
+                                </tr>
+                                <tr>
+                                    <td>手机号码</td>
+                                    <td>13588030001</td>
+                                </tr>
+                                <tr>
+                                    <td>收货地址</td>
+                                    <td>浙江省杭州市江干区杭州电子科技大学</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        <div id="J_ManageSideBar" class="xd-manage-slide fl">
+            <div>
+                <div class="box">
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>用户管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="manage_user.html" target="_self" style="color:#FF5555">账户管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>订单管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="order.html" target="_self" >订单管理</a>
+                        </li>
+                    </ul>
+                    <h1>
+                        <span class="s-icon"><img width="16" src="../images/shopping-icon.png"/></span>
+                        <span>商品管理</span>
+                    </h1>
+                    <ul>
+                        <li style="margin-left: 30px">
+                            <a href="add_items.html" target="_self">发布新商品</a>
+                        </li>
+                        <li style="margin-left: 30px">
+                            <a href="manage_items.html" target="_self">在售商品管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街&nbsp;-&nbsp;我的买手街！</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+    <link href="../../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../../css/index.css"/>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../js/gxz.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .navbar-brand {
+            height: 40px;
+            padding-top: 10px;
+        }
+
+        .navbar {
+            min-height: 40px;
+        }
+        .navbar-toggle {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        .right-text {
+            font-size: 14px;
+            height: 25px;
+            margin-left: 550px;
+            color: #999999;
+        }
+
+    </style>
+</head>
+<body>
+<div id="top" style="width: 1270px"></div>
+<div style="width: 1270px;">
+    <img src="../../images/detailimage/title-icon.jpg" height="100px" width="1270px"/>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <ul class="nav navbar-nav" style="min-width: 00px">
+            <li class="navbar-header">
+                　 <a href="#" class="navbar-brand">首页</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">所有商品<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">夏季潮品</a></li>
+                    <li><a href="#">秋季上衣</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<form>
+    <div style=" margin:0 auto;background:#fbfbfb;width: 1280px">
+        <img id="simg" src="../../images/detailimage/item1/result-1-big.jpg" style="float: left;margin-left: 85px;width: 401px;height: 601px"/>
+        <div style="margin-left: 550px;width: 540px">
+            <div style="font-size: x-large;font-weight: bold;">夏季吊带可爱卡通休闲家居字母背心性感短裤套装</div>
+        </div>
+        <p>
+        <div class="right-text" style="margin-top: 30px">价格：
+            <del>￥35.72</del>
+        </div>
+        <div class="right-text">会员价：<span style="font-size: xx-large;color: #ff0000;">￥20</span></div>
+        <div class="right-text" style="margin-top: 50px">尺码：
+            <input type="button" class="btn btn-default" style="margin-left: 15px" id="M_size" value="M"/>
+            <input type="button" class="btn btn-default" style="margin-left: 15px" id="L_size" value="L"/>
+            <input type="button" class="btn btn-default" style="margin-left: 15px" id="XL_size" value="XL">
+            <span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=634160938&site=qq&menu=yes"><img border="0" src="../../images/detailimage/icon-kefu.png" value="联系客服" title="联系客服"/></a></span>
+        </div>
+        <div style="margin-top: 50px;margin-left: 550px"><span style="color: #999999;margin-right: 26px">数量:</span>
+            <input id="min" name="" type="button" class="btn btn-default btn-sm" value="－ "/>
+            <input id="text_box" name="" type="text" value="1" style="width:40px;text-align:center;height: 27px"/>
+            <input id="add" name="" type="button" class="btn btn-default btn-sm" value="+"/>
+            <span style="color: #999999;margin-left: 40px">库存<span id="remainCount">762</span>件</span>
+        </div>
+
+        <div>
+            <a href="#"> <input type="button" class="btn btn-danger btn-lg"
+                                style="margin-left: 65px;margin-top: 65px;width: 200px;" id="buy" value="立即购买"/></a>
+
+            <input type="button" class="btn btn-default btn-lg"
+                   style="margin-left: 65px;margin-top: 65px;width: 200px;" id="addBuyCar" value="加入购物车"
+                   onclick="shoppingCartAnimate()">
+        </div>
+        <img src="../../images/mgj_30x220.png" style="display: none" id="cart"/>
+        <div style="margin-top: 70px">
+            <img src="../../images/detailimage/result-right-info.png"/>
+        </div>
+    </div>
+    <!-- 下面是商品详情，评论页面-->
+    <div style="margin-left: 80px;margin-top: 30px;border: double 1px gainsboro;clear: both">
+        <ul class="nav nav-tabs" style="font-size: large;font-weight: bolder;">
+            <li class="active"><a href="#shopinfo" data-toggle="tab">商品详情</a></li>
+            <li><a href="#commit" data-toggle="tab">用户评论</a></li>
+        </ul>
+        <div id="tabContent" class="tab-content" style="width: 1200px;margin-left: 5px" >
+            <div class="tab-pane fade in active" id="shopinfo">
+                <p>
+                <div style="text-decoration:underline;font-size: large;font-weight: bold;margin-left: 10px;margin-top: 10px;margin-right: 40px;">
+                    商品描述
+                </div>
+                <div style="color: #555;margin-left: 10px;margin-top: 10px">夏季吊带可爱卡通休闲家居字母背心性感短裤套装</div>
+                </p>
+                <p>
+                <div style="text-decoration:underline;font-size: large;font-weight: bold;margin-left: 10px;margin-top: 40px;margin-right: 40px;">
+                    产品参数
+                </div>
+                <img src="../../images/detailimage/item1/item1_cs.png"/>
+                </p>
+                <p>
+                <div style="text-decoration:underline;font-size: large;font-weight: bold;margin-left: 10px;margin-top: 40px;margin-right: 40px;">
+                    穿着效果
+                </div>
+                <img src="../../images/detailimage/item1/item1_show1.jpg"/>
+                <img src="../../images/detailimage/item1/item1_show2.jpg"/>
+                <img src="../../images/detailimage/item1/item1_show3.jpg"/>
+                </p>
+                <p>
+                <div style="text-decoration:underline;font-size: large;font-weight: bold;margin-left: 10px;margin-top: 40px;margin-right: 40px;">
+                    尺码说明
+                </div>
+                <img src="../../images/detailimage/item1/item1_info.jpg"/>
+                </p>
+            </div>
+
+            <div class="tab-pane fade" id="commit" style="margin-left: 10px">
+                <p><p style="font-weight: bold;font-size: larger">买家评分</p>
+                 总分:
+                   <img id="star_1" title="差(1)" src="../../images/detailimage/icon_star_1.png">
+                   <img id="star_2" title="一般(2)" src="../../images/detailimage/icon_star_1.png">
+                   <img id="star_3" title="好(3)" src="../../images/detailimage/icon_star_1.png">
+                   <img id="star_4" title="很好(4)" src="../../images/detailimage/icon_star_3.png">
+                   <img id="star_5" title="非常好(5)" src="../../images/detailimage/icon_star_2.png">
+                </p>
+
+                <p style="font-weight: bold;font-size: larger;margin-top: 40px">全部评价</p>
+                  <div>
+                      <img src="../../images/detailimage/user1.jpg" style="float: left;border-radius:50%;margin-right: 20px" />
+                      <div style="color: #333333;">gcx**ee</div>
+                      <div style="color: #666666;">样式很好看 质量也可以 送了小礼物 客服也很耐心态度很热情 很满意的一次购物</div>
+                      <div style="color: #999999;margin-top: 8px"><span>颜色:粉红色</span><span style="margin-left: 40px"> 尺码:L</span></div>
+                  </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</form>
+<div id="foot" style="clear: both"></div>
+</body>
+<script type="text/javascript">
+
+    function shoppingCartAnimate() {
+        var goodsItem = $("#simg");
+        var flyElm = goodsItem.clone();
+        $('body').append(flyElm);
+        flyElm.css({
+            'z-index': 9000,
+            'display': 'block',
+            'position': 'absolute',
+            'top': goodsItem.offset().top + 'px',
+            'left': goodsItem.offset().left + 'px',
+            'width': goodsItem.width() + 'px',
+            'height': goodsItem.height() + 'px'
+        });
+        flyElm.animate({
+            top: $('#cart').offset() + 800,
+            left: $('#cart').offset().left + 1150,
+            width: 0,
+            height: 0
+        }, 500, function () {
+            flyElm.remove();
+        });
+    }
+</script>
+</html>
+

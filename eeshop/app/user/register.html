@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../images/favicon.ico">
+    <title>新用户注册</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../css/index.css"/>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <style type="text/css">
+        .span_control {
+            width: 2px;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .div_control {
+            border-bottom-width: medium;
+            border-bottom-color: #666;
+            border-bottom-style: solid;
+        }
+
+        .text_control {
+            width: 200px;
+            display: inline;
+        }
+    </style>
+    <script language="javascript">
+        var time = 60;
+        var i;
+        var patt_userName = /^[\u4E00-\u9FFF0-9a-zA-Z_]{4,}$/;//用户名至少4个字符
+        var patt_password = /^[0-9a-zA-Z_]{6,}$/;//密码至少6位
+        var patt_tel = /^\d{11}$/;//手机号11位
+        var patt_verificationCode = /^[0-9a-zA-Z]+$/;//验证码为数字或字母
+        /*发送验证码按钮的倒计时显示*/
+        function clock() {
+            //alert('clock');
+            var btn = document.getElementById("button_sendVerificationCode");
+            //$("#button").value = time;
+            btn.value = time + " 秒";
+            if (time == 0) {
+                clearInterval(i);
+                btn.disabled = false;
+                time = 60;
+                btn.value = "重发验证码";
+            }
+            time--;
+        }
+
+        function send(obj) {
+            document.getElementById('message_tel').innerHTML = '';
+            if (patt_tel.test(document.getElementById('text_tel').value)) {
+                obj.disabled = "disabled";
+                i = setInterval("clock()", 1000);
+            } else {
+                document.getElementById('message_tel').innerHTML = '✘请输入正确的手机号';
+            }
+        }
+
+        //表单验证
+        function formValidate() {
+            document.getElementById('message_userName').innerHTML = '';
+            document.getElementById('message_setPassword').innerHTML = '';
+            document.getElementById('message_confirmPassword').innerHTML = '';
+            document.getElementById('message_sendVerificationCode').innerHTML = '';
+            document.getElementById('message_tel').innerHTML = '';
+            var username = document.getElementById('text_username');
+            var password1 = document.getElementById('text_setPassword');
+            var password2 = document.getElementById('text_confirmPassword');
+            var verificationcode = document.getElementById('text_verificationCode');
+            var tel = document.getElementById('text_tel');
+            var flag = true;
+            if (!patt_userName.test(username.value)) {
+                document.getElementById('message_userName').innerHTML = '✘用户名不合法，至少4个字符';
+                flag = false;
+            }
+            if (!patt_password.test(password1.value)) {
+                document.getElementById('message_setPassword').innerHTML = '✘密码不合法，至少6个字符';
+                flag = false;
+            }
+            if (password1.value != password2.value) {
+                document.getElementById('message_confirmPassword').innerHTML = '✘两次密码不一致';
+                flag = false;
+            }
+            if (!patt_tel.test(tel.value)) {
+                document.getElementById('message_tel').innerHTML = '✘请输入正确的手机号';
+                flag = false;
+            }
+            if (!patt_verificationCode.test(verificationcode.value)) {
+                document.getElementById('message_sendVerificationCode').innerHTML = '✘请输入正确验证码';
+                flag = false;
+            }
+            return flag;
+        }
+
+        function regist() {
+            if (formValidate()) {
+                layer.msg('注册成功！', {
+                    time: 1500, 												//1.5s后自动关闭并跳转到首页
+                });
+               setTimeout("javascript:location.href='../../index.html'", 1500);
+            }
+            else{
+                layer.msg('注册失败！', {
+                    time: 1500, 												//1.5s后自动关闭
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="top"></div>
+<div class="container">
+
+    <div>
+        <img src="../../images/new-icon.png" />
+    </div>
+    <div class="div_control">
+        <h2 class="form-signin-heading" style="color: #F00">欢迎注册</h2>
+        <p style="color: #666; text-align: right;">
+            已有账号 <a href="login.html" style="color: #03F; font-size: 16px">点击登录</a>
+        </p>
+    </div>
+    <form name="form1" method="post" action="">
+        <p>&nbsp;</p>
+        <table width="900" border="0" cellpadding="10" cellspacing="10">
+            <tr>
+                <td width="14" height="50">&nbsp;</td>
+                <td width="90" align="center" valign="middle"><span
+                        class="span_control">用户名</span></td>
+                <td width="417"><input type="text" id="text_username" name="text_username"
+                                       class="form-control text_control" placeholder="您的账户名" required
+                                       autofocus><span id="message_userName" style="color:#F00"></span></td>
+                <td width="249" rowspan="7" align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="50">&nbsp;</td>
+                <td align="center" valign="middle"><span class="span_control">设置密码</span></td>
+                <td><input type="password" id="text_setPassword"
+                           name="text_setPassword" class="form-control text_control"
+                           placeholder="建议至少使用两种字符组合" required autofocus><span id="message_setPassword"
+                                                                               style="color:#F00"></span></td>
+            </tr>
+            <tr>
+                <td height="50">&nbsp;</td>
+                <td align="center" valign="middle"><span class="span_control">确认密码</span></td>
+                <td><input type="password" id="text_confirmPassword"
+                           name="text_confirmPassword" class="form-control text_control"
+                           placeholder="请再次输入密码" required autofocus><span id="message_confirmPassword"
+                                                                          style="color:#F00"></span></td>
+            </tr>
+            <tr>
+                <td height="50">&nbsp;</td>
+                <td align="center" valign="middle"><span class="span_control">手机号</span></td>
+                <td><input type="text" id="text_tel" name="text_tel"
+                           class="form-control text_control" placeholder="建议使用常用手机" required
+                           autofocus><span id="message_tel" style="color:#F00"></span></td>
+            </tr>
+            <tr>
+                <td height="50">&nbsp;</td>
+                <td align="center" valign="middle"><span class="span_control">手机验证码</span></td>
+                <td><input type="text" id="text_verificationCode"
+                           name="text_verificationCode" class="form-control text_control"
+                           style="display: inline" placeholder="输入收到的验证码" required autofocus>
+                    </button>
+                    <input type="button" id="button_sendVerificationCode"
+                           name="button_sendVerificationCode" class="btn btn-default"
+                           onClick="send(this)" style="width: 100px; display:inline" value="发送验证码"><span
+                            id="message_sendVerificationCode" style="color:#F00"></span></td>
+            </tr>
+            <tr>
+                <td height="50">&nbsp;</td>
+                <td height="50" colspan="2" align="left" valign="middle"><input
+                        type="checkbox" id="checkbox_agree" name="checkbox_agree"
+                        value="remember-me" checked disabled>我已阅读并同意注册协议
+                </td>
+            </tr>
+            <tr>
+                <td height="50">&nbsp;</td>
+                <td colspan="2" align="left" valign="middle">
+                    <input class="btn btn-lg btn-danger btn-block size_control"
+                           style="width: 310px" type="button" id="button_register" value="立即注册"
+                           onClick="regist() ,formValidate()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+</div>
+<div class="foot">
+    <div class="foot-top banxin">
+        <div class="foot-top-l">
+            <div class="foot-logo">
+                <a href="#"><img src="../../images/foot-logo.png"/></a>
+            </div>
+            <p class="xukezheng">
+                营业执照注册号：<a href="#">330106000129004</a>
+            </p>
+            <p class="xukezheng">
+                增值电信业务经营许可证：<a href="#">浙B2-20110349</a>
+            </p>
+        </div>
+        <div class="foot-top-r">
+            <dl>
+                <dt>公司</dt>
+                <dd><a href="#">关于我们</a></dd>
+                <dd><a href="#">招聘信息</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+            </dl>
+            <dl>
+                <dt>消费者</dt>
+                <dd><a href="#">帮助中心</a></dd>
+                <dd><a href="#">意见反馈</a></dd>
+                <dd><a href="#">手机版下载</a></dd>
+            </dl>
+
+            <dl>
+                <dt>管理员入口</dt>
+                <dd><a href="#">管理员登录</a></dd>
+            </dl>
+
+            <dl>
+                <dt>商家</dt>
+                <dd><a href="" target="_blank">蘑菇街学院</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>蘑菇街&nbsp;-&nbsp;我的买手街！</title>
+    <link href="../../images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="../../css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/udata.css"/>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script type="text/javascript" src="../../js/userinfo.js"></script>
+
+</head>
+
+<body>
+
+<div class="mgj_rightbar">
+    <div class="mgj-my-cart">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">购物车</div>
+        </a>
+    </div>
+    <div class="mgj-my-coupon">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">优惠券</div>
+        </a>
+    </div>
+    <div class="mgj-my-wallet">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">钱包</div>
+        </a>
+    </div>
+    <div class="mgj-my-browserlog">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+            <div class="s-txt">足迹</div>
+        </a>
+    </div>
+    <div class="sideBottom">
+        <a class="nofollow" href="javascript:;">
+            <i class="s-icon"></i>
+        </a>
+    </div>
+
+
+</div>
+<div class="head">
+    <div class="head-top">
+        <ul>
+            <li class="dingdan"><a class="dd" href="#">我的订单</a></li>
+            <li><a class="dl" href="#" style="color:#F00">退出</a></li>
+            <li><a class="dl" href="udata.html" id="login" name="login">江宁超</a></li>
+        </ul>
+
+
+    </div>
+    <div class="head-main">
+        <a href="../../index.html"> <img class="logo" src="../../images/head-top-logo.png"/></a>
+    </div>
+    <div class="head-foot">
+        <ul class="daohang">
+            <li class="sk"><a href="udata.html">我的信息</a></li>
+        </ul>
+        <ul class="daohang">
+            <li class="sk"><a href="uaddr.html">新增收货地址</a></li>
+        </ul>
+        <ul class="daohang">
+            <li class="sk"><a href="uphoto.html">更换头像</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="main"> 
+	<div id="body" class="fm960">
+    	<div class="mu_wrap clearfix">
+            <div class="mu_nav_wrap">
+                <div class="mu_nav_info">
+                    <div class="mu_nav_info_avatar">
+                        <div class="mu_nav_info_avatar_mk"></div>
+                        <img src="../../images/detailimage/user1.jpg" width="100" height="100" title="江宁超">
+                    </div>
+                    <p align="center">江宁超</p>
+                </div>
+            </div>
+            
+            <div class="mu_content_wrap">
+                <div id="setting_box" class="f1">
+                    
+                    <div id="setting_form" class="setting_basic">
+                    	<div class="settings_title">
+                        	<span>更换头像</span>
+                    	</div>
+                    	<div id="setting_form" class="setting_avartar">
+                        	<form id="avartarForm" enctype="multipart/form-data" method="post" action="">
+                            	<dl>
+                                	<dd>头像：</dd>
+                                    <dt>
+                                        <img id="uphoto_pre" class="head_bd r3" src="../../images/detailimage/user2.jpg" width="160" height="160">
+                                    </dt>
+                                    <dd>上传新头像:</dd>
+                                    <dt style="position:relative;">
+                                        <input type="text" id="view_avartar" readonly="readonly" class="gray_text" onmouseout="document.getElementById('upload_avartar').style.display='none';"/>
+                                        <input type="button" class="gray_button" onmouseover="document.getElementById('upload_avartar').style.display='block';"  value="浏览..."/>
+                                        <input type="file" onchange="document.getElementById('view_avartar').value=this.value;document.getElementById('uphoto_pre').src=getPath(this);this.style.display='none';" class="tfile" id="upload_avartar" name="avatar"/>
+                                    </dt>
+                                    <dd class="msg">&nbsp;</dd>
+                                    <dt class="msg">
+                                        建议使用正方形的图片，支持JPG、GIF、JPEG格式。
+                                    </dt>
+                                    <dd class="avartar_confirm">&nbsp;</dd>
+                                    <dt>
+                                       <input type="submit" value="确定" class="green_button" />
+                                    </dt>
+                                </dl>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="foot">
+    <div class="foot-top banxin">
+        <div class="foot-top-l">
+            <div class="foot-logo">
+                <a href="#"><img src="../../images/foot-logo.png"/></a>
+            </div>
+            <p class="xukezheng">
+                营业执照注册号：<a href="#">330106000129004</a>
+            </p>
+            <p class="xukezheng">
+                增值电信业务经营许可证：<a href="#">浙B2-20110349</a>
+            </p>
+            <p class="xukezheng">
+                ICP备案号：浙ICP备10044327号-3
+            </p>
+            <p class="xukezheng">
+                ©2015 Mogujie.com 杭州卷瓜网络有限公司
+            </p>
+
+        </div>
+        <div class="foot-top-r">
+            <dl>
+                <dt>公司</dt>
+                <dd><a href="#">关于我们</a></dd>
+                <dd><a href="#">招聘信息</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+            </dl>
+            <dl>
+                <dt>消费者</dt>
+                <dd><a href="#">帮助中心</a></dd>
+                <dd><a href="#">意见反馈</a></dd>
+                <dd><a href="#">手机版下载</a></dd>
+            </dl>
+
+            <dl>
+                <dt>管理员入口</dt>
+                <dd><a href="#">管理员登录</a></dd>
+                <dd><a href="#">管理后台</a></dd>
+            </dl>
+
+            <dl>
+                <dt>商家</dt>
+                <dd><a href="" target="_blank">蘑菇街学院</a>
+                </dd>
+
+            </dl>
+        </div>
+
+    </div>
+    <div class="foot-bottom banxin">
+        <dl>
+            <dt>友情链接:</dt>
+            <dd><a href="#">淘粉吧</a></dd>
+            <dd><a href="#">蘑菇街团购网</a></dd>
+            <dd><a href="#">蘑菇街女装</a></dd>
+            <dd><a href="#">蘑菇街男装</a></dd>
+            <dd><a href="#">蘑菇街鞋子</a></dd>
+            <dd><a href="#">蘑菇街包包</a></dd>
+            <dd><a href="#">蘑菇街家居</a></dd>
+            <dd><a href="#">家具网</a></dd>
+            <dd><a href="#">装修</a></dd>
+            <dd><a href="#">蘑菇街母婴</a></dd>
+            <dd><a href="#">衣联网</a></dd>
+        </dl>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
