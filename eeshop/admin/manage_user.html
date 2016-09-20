@@ -10,8 +10,19 @@
     <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="../js/manage_items.js"></script>
     <script src="../js/layer/layer.js"></script>
+<!--    按钮背景色-->
+    <style type="text/css">
+        <!--
+        .btn-bgc{
+            color:white;
+            background: #FF5555;
+        }
+        -->
+    </style>
+
 </head>
 <body class="pace-done" style="background-color: rgb(204, 232, 207);">
+
 <div id="J_ManageNavBar" class="xd-manage-nav">
     <div class="content clearfix" data-reactid=".1">
         <a href="" class="logo fl"></a>
@@ -31,21 +42,18 @@
         <div id="J_Page" class="xd-manage-content fl">
             <div class="xd-goods-publish xd-page">
                 <div class="xd-header">
-                    <h1 class="xd-title">用户管理</h1>
+                    <h1 class="xd-title">账户管理</h1>
                 </div>
                 <div id="wrapper">
                     <div id="page-wrapper">
                         <div class="col-md-12 graphs">
                             <div class="xs">
-                                <div style="font-weight: bolder;margin: 0 auto;text-align:center;padding: 10px;color: #555">
-                                    账户管理
-                                </div>
-                                <div>
+                                <div style="background:#F5F5F5;width:100%;height: 75px; ">
                                     <input class="search_box" type="text" placeholder="用户id/用户名"/>
                                     <a href="#" target="_blank"><input class="search_button" type="button" id="search"
                                                                        name="search"/></a>
                                 </div>
-                                <div style="margin-top:80px" class="bs-example4" data-example-id="contextual-table">
+                                <div style="margin-top:20px" class="bs-example4" data-example-id="contextual-table">
                                     <table class="table" id="manage_user">
                                         <thead>
                                         <tr>
@@ -57,18 +65,18 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">1</th>
                                             <td>10001</td>
                                             <td>13588030001</td>
                                             <td>正常</td>
                                             <td>
                                                 <div>
-                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                    <input type="button" class="btn btn-sm btn-bgc" name="look" value="查看账户"
                                                            onclick="look(this)">
-                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="freeze"
                                                            value="冻结账户" onclick="freeze(this)">
-                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="thaw"
                                                            value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
@@ -80,27 +88,27 @@
                                             <td>正常</td>
                                             <td>
                                                 <div>
-                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                    <input type="button" class="btn btn-sm btn-bgc" name="look" value="查看账户"
                                                            onclick="look(this)">
-                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="freeze"
                                                            value="冻结账户" onclick="freeze(this)">
-                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="thaw"
                                                            value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">3</th>
                                             <td>10003</td>
                                             <td>13588030003</td>
                                             <td>正常</td>
                                             <td>
                                                 <div>
-                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                    <input type="button" class="btn btn-sm btn-bgc" name="look" value="查看账户"
                                                            onclick="look(this)">
-                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="freeze"
                                                            value="冻结账户" onclick="freeze(this)">
-                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="thaw"
                                                            value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
@@ -112,27 +120,27 @@
                                             <td>正常</td>
                                             <td>
                                                 <div>
-                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                    <input type="button" class="btn btn-sm btn-bgc" name="look" value="查看账户"
                                                            onclick="look(this)">
-                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="freeze"
                                                            value="冻结账户" onclick="freeze(this)">
-                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="thaw"
                                                            value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">5</th>
                                             <td>10005</td>
                                             <td>13588030005</td>
                                             <td>正常</td>
                                             <td>
                                                 <div>
-                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                    <input type="button" class="btn btn-sm btn-bgc" name="look" value="查看账户"
                                                            onclick="look(this)">
-                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="freeze"
                                                            value="冻结账户" onclick="freeze(this)">
-                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="thaw"
                                                            value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>
@@ -144,11 +152,11 @@
                                             <td>正常</td>
                                             <td>
                                                 <div>
-                                                    <input type="button" class="btn  btn-info" name="look" value="查看账户"
+                                                    <input type="button" class="btn btn-sm btn-bgc" name="look" value="查看账户"
                                                            onclick="look(this)">
-                                                    <input type="button" class="btn  btn-warning" name="freeze"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="freeze"
                                                            value="冻结账户" onclick="freeze(this)">
-                                                    <input type="button" class="btn  btn-success" name="thaw"
+                                                    <input type="button" class="btn  btn-sm btn-bgc" name="thaw"
                                                            value="解冻账户" onclick="thaw(this)">
                                                 </div>
                                             </td>

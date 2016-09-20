@@ -13,6 +13,17 @@
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/moment.js"></script>
     <script type="text/javascript" src="../js/daterangepicker.js"></script>
+    <script src="../js/layer/layer.js"></script>
+    <!--    按钮背景色-->
+    <style type="text/css">
+        <!--
+        .btn-bgc{
+            color:white;
+            background: #FF5555;
+        }
+        -->
+    </style>
+
 </head>
 <body class="pace-done" style="background-color: rgb(204, 232, 207);">
 <div id="J_ManageNavBar" class="xd-manage-nav">
@@ -34,15 +45,12 @@
         <div id="J_Page" class="xd-manage-content fl">
             <div class="xd-goods-publish xd-page">
                 <div class="xd-header">
-                    <h1 class="xd-title">订单列表</h1>
+                    <h1 class="xd-title">订单管理</h1>
                 </div>
                 <div id="wrapper">
                     <div id="page-wrapper">
                         <div class="col-md-12 graphs">
                             <div class="xs">
-                                <div style="font-weight: bolder;margin: 0 auto;text-align:center;padding: 10px;color: #555">
-                                    订单列表
-                                </div>
                                 <div>
                                     <input class="search_box" type="text" placeholder="订单编号/用户名"/>
                                     <a href="#" target="_blank"><input class="search_button" type="button" id="search"
@@ -63,10 +71,9 @@
                                                                    value="08/01/2016 1:00 PM - 08/31/2016 1:00 PM"
                                                                    class="span4"/>
                                                             <input type="button" name="searchByDate" id="searchByDate"
-                                                                   class="fr btn btn-info" value="查询"/>
+                                                                   class="fr btn btn-bgc" value="查询"/>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </fieldset>
                                         </form>
@@ -85,7 +92,7 @@
 
                                     </div>
                                 </div>
-                                <div style="margin-top:30px" data-example-id="contextual-table">
+                                <div style="margin-top:20px" data-example-id="contextual-table">
                                     <table class="table">
                                         <thead>
                                         <tr>
@@ -93,102 +100,193 @@
                                             <th>订单id</th>
                                             <th>订单编号</th>
                                             <th>日期</th>
-                                            <th>用户id</th>
+                                            <th>用户名</th>
                                             <th>总价</th>
                                             <th>件数</th>
-                                            <th>详情</th>
+                                            <th>状态</th>
+                                            <th>操作</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">1</th>
                                             <td>10001</td>
                                             <td>100000000000000001</td>
                                             <td>2016-01-01 08:00:00</td>
-                                            <td>10001</td>
+                                            <td>13588030001</td>
                                             <td>690</td>
                                             <td>6</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
                                             <td>10002</td>
                                             <td>100000000000000002</td>
                                             <td>2016-01-02 08:00:00</td>
-                                            <td>10002</td>
+                                            <td>13588030002</td>
                                             <td>122</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">3</th>
                                             <td>10003</td>
                                             <td>100000000000000003</td>
                                             <td>2016-01-03 08:00:00</td>
-                                            <td>10003</td>
+                                            <td>13588030003</td>
                                             <td>85</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
                                             <td>10004</td>
                                             <td>100000000000000004</td>
                                             <td>2016-01-04 08:00:00</td>
-                                            <td>10004</td>
+                                            <td>13588030004</td>
                                             <td>56</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">5</th>
                                             <td>10005</td>
                                             <td>100000000000000005</td>
                                             <td>2016-01-05 08:00:00</td>
-                                            <td>10005</td>
+                                            <td>13588030005</td>
                                             <td>79</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">6</th>
                                             <td>10006</td>
                                             <td>100000000000000006</td>
                                             <td>2016-01-06 08:00:00</td>
-                                            <td>10006</td>
+                                            <td>13588030006</td>
                                             <td>269</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">7</th>
                                             <td>10007</td>
                                             <td>100000000000000007</td>
                                             <td>2016-01-07 08:00:00</td>
-                                            <td>10007</td>
+                                            <td>13588030007</td>
                                             <td>99</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">8</th>
                                             <td>10008</td>
                                             <td>100000000000000008</td>
                                             <td>2016-01-08 08:00:00</td>
-                                            <td>10008</td>
+                                            <td>13588030008</td>
                                             <td>89</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
-                                        <tr class="info">
+                                        <tr>
                                             <th scope="row">9</th>
                                             <td>10009</td>
                                             <td>100000000000000009</td>
                                             <td>2016-01-09 08:00:00</td>
-                                            <td>10009</td>
+                                            <td>13588030009</td>
                                             <td>109</td>
                                             <td>1</td>
-                                            <td><a href="order_detail.html">查看订单明细</a></td>
+                                            <td>未发货</td>
+                                            <td><div>
+                                                <input type="button" class="btn btn-sm btn-bgc" name="deliver"
+                                                       value="发货"onclick="deliver(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="cancelOrder"
+                                                       value="取消订单" onclick="cancelOrder(this)">
+                                                <input type="button" class="btn  btn-sm btn-bgc" name="closeOrder"
+                                                       value="关闭订单" onclick="closeOrder(this)">
+                                                <input type="button" class="btn btn-sm btn-bgc" name="lookOrder"
+                                                       value="查看明细"onclick="lookOrder(this)"></div>
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -242,4 +340,35 @@
     </div>
 </div>
 </body>
+<script>
+    /*查看订单*/
+    function lookOrder(obj){
+        window.location.href="order_detail.html";
+    }
+
+    /*发货*/
+    function deliver(obj){
+    /*        alert(obj.parentNode.parentNode.rowIndex);
+    var table = document.getElementById("manage_user");*/
+
+        layer.msg('发货成功！', {
+        time: 1500, 												//1.5s后自动关闭
+        });
+    }
+    /*关闭订单*/
+    function closeOrder(obj){
+        layer.msg('关闭订单成功！', {
+            time: 1500, 											//1.5s后自动关闭
+        });
+    }
+    /*取消订单*/
+    function cancelOrder(obj){
+        layer.msg('取消订单成功！', {
+        time: 1500, 												//1.5s后自动关闭
+        });
+    }
+
+
+</script>
+
 </html>
